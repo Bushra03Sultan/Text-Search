@@ -6,11 +6,14 @@ A high-performance Text Search and Replace System implemented in Java entirely f
 This project combines a Custom Singly Linked List with a Binary Search Tree (BST) to achieve fast searching while maintaining sentence order and grammatical integrity.
 ---
 ## 🏗️ System Architecture & Design
+
 Using a single data structure presents trade-offs:
 * A BST automatically sorts unique words alphabetically, losing sentence structure.
 * A Linked List preserves text order but requires O(m) linear time for searching.
+
 To solve this, our design integrates two custom data structures working in tandem:
 
+`text
                   +--------------------------------+
                   |           input.txt            |
                   +--------------------------------+
@@ -19,7 +22,7 @@ To solve this, our design integrates two custom data structures working in tande
                    |                             |
                    v                             v
      +--------------------------+  +--------------------------+
-     |   BinarySearchTree (BST) |  | CustomTextList (Linked)  |
+     |   BinarySearchTree (BST) |  |  CustomTextList (Linked) |
      +--------------------------+  +--------------------------+
      | Stores UNIQUE words      |  | Preserves EXACT word     |
      | Provides O(log n) search |  | order & sentence grammar |
@@ -72,25 +75,23 @@ Status: Complete
 To prevent `O(n)` worst-case scenarios on pre-sorted text input, the tree structure can be upgraded to a **Self-Balancing Binary Search Tree** (such as an **AVL Tree** or **Red-Black Tree**). This would guarantee strict `O(log n)` search and modification bounds under all circumstances.
 ---
 ## 🚀 How to Run
-1. **Clone the repository:**  
-```bash
-   git clone https://github.com/Bushra03Sultan/text-search-replace.git
-  
-2. **Navigate to project directory:**  
-```bash
-   cd text-search-replace
-  
-3. **Ensure `input.txt` is present** in the same root folder with your sample text.
-4. **Compile and execute:**   
-```bash
-   javac TextSearchReplace.java
-   java TextSearchReplace
-   
+
+Ensure input.txt is present in the project directory, then run the following commands in your terminal:
+
+# 1. Clone the repository
+git clone https://github.com/Bushra03Sultan/text-search-replace.git
+
+# 2. Navigate to the project directory
+cd text-search-replace
+
+# 3. Compile and execute the application
+javac TextSearchReplace.java
+java TextSearchReplace
 ---
 
 ## 👩‍💻 Author
 
-Boshra Faruq
+Bushra Farooq
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bushra03Sultan)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bushra-faruq-906696429)
