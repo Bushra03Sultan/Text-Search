@@ -5,10 +5,10 @@
 A high-performance Text Search and Replace System implemented in Java entirely from scratch, without relying on built-in collections framework classes (such as ArrayList or HashMap). 
 This project combines a Custom Singly Linked List with a Binary Search Tree (BST) to achieve fast searching while maintaining sentence order and grammatical integrity.
 ---
-## 🏗️ Architecture & Dual Data Structure Design
-Using a single data structure presents tradeoffs:
+## 🏗️ System Architecture & Design
+Using a single data structure presents trade-offs:
 * A BST automatically sorts unique words alphabetically, losing sentence structure.
-* A Linked List preserves text order but requires $O(m)$ linear time for searching.
+* A Linked List preserves text order but requires O(m) linear time for searching.
 To solve this, our design integrates two custom data structures working in tandem:
                   +--------------------------------+
                   |           input.txt            |
@@ -28,16 +28,16 @@ To solve this, our design integrates two custom data structures working in tande
    - Preserves the original word order, formatting, and sentence structure.
 2. **BinarySearchTree (Custom BST):**
    -only unique words words** lexicographically.
-   - Provides $O(\log n)$ efficient word lookup operations.
+   - Provides O(log n) efficient word lookup operations.
 ---
-## 🔄 Search & Replace Workflowreplaceeplace** operation is execuLookup:ookup:** The system querBST **BST** to verify if the search word exists in $O(\log n)$ average tSequence Update:pdate:** If found, it iterates through the CustomTextList to update all occurrences in the actual tTree Synchronization & Edge Case Handling:dling:**
+## 🔄 Search & Replace Workflowreplaceeplace** operation is execuLookup:ookup:** The system querBST **BST** to verify if the search word exists in O(log n) average tSequence Update:pdate:** If found, it iterates through the CustomTextList to update all occurrences in the actual tTree Synchronization & Edge Case Handling:dling:**
    - The old word is deleted from the BST via node restructuring (handling leaf, single-child, or two-children node deletions).
    - If the *new replacement word* does not already exist in the tree, it is inserted into the BST to keep the tree accurate.
 ---
 ## 📊 Complexity Analysis
 
 | Algorithm / Operation | Structure Used | Average Case | Worst Case | Description |
-| :--- | :--- | :--- | :--- | :Word SearchSearch** | Binary Search Tree | $O(\log n)$ | $O(n)$ | Recursive binary search traverWord Insertionertion** | Binary Search Tree | $O(\log n)$ | $O(n)$ | Lexicographical placement (ignores duplicatWord Deletionletion** | Binary Search Tree | $O(\log n)$ | $O(n)$ | Replaces node using in-order succesText Traversal & Replaceeplace** | Custom Linked List | $O(m)$ | $O(m)$ | Sequential pass over all $m$ worNote:*Note:** $n$ represents the nuunique words words** in the BST, while $m$ represetotal word count count** in the input text.
+| :--- | :--- | :--- | :--- | :Word SearchSearch** | Binary Search Tree | O(log n) | O(n) | Recursive binary search traverWord Insertionertion** | Binary Search Tree | O(log n) | O(n) | Lexicographical placement (ignores duplicatWord Deletionletion** | Binary Search Tree | O(log n) | O(n) | Replaces node using in-order succesText Traversal & Replaceeplace** | Custom Linked List | O(m) | O(m) | Sequential pass over all m worNote:*Note:** n represents the nuunique words words** in the BST, while m represetotal word count count** in the input text.
 ---
 ## 🖥️ Console Interface & Sample Output
 `text
@@ -56,7 +56,7 @@ Current Text: This project applies advanced information structures to solve text
 Status: Complete
 ---
 ## 🔮 Future Improvements
-To prevent $O(n)$ worst-case scenarios on pre-sorted text input, the tree structure can be upgraded to a **Self-Balancing Binary Search Tree** (such as an **AVL Tree** or **Red-Black Tree**). This would guarantee strict $O(\log n)$ search and modification bounds under all circumstances.
+To prevent `O(n)` worst-case scenarios on pre-sorted text input, the tree structure can be upgraded to a **Self-Balancing Binary Search Tree** (such as an **AVL Tree** or **Red-Black Tree**). This would guarantee strict `O(log n)` search and modification bounds under all circumstances.
 ---
 ## 🚀 How to Run
 1. **Clone the repository:**
@@ -77,4 +77,9 @@ bash
    java TextSearchReplace
    `
 ---
+## 👩‍💻 Author
+* **BushCourse: - ID: `446818050`
+* **Course:** 2431CSS Data Structures and Algorithms (Section: 2385)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bushra03Sultan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bushra-faruq-906696429)
 
