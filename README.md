@@ -27,7 +27,7 @@ To solve this, our design integrates two custom data structures working in tande
      | Stores UNIQUE words      |  | Preserves EXACT word     |
      | Provides O(log n) search |  | order & sentence grammar |
      +--------------------------+  +--------------------------+
-
+```
 1. CustomTextList (Custom Singly Linked List):
    * Appends incoming words sequentially via a tail pointer.
    * Preserves the original word order, formatting, and sentence structure.
