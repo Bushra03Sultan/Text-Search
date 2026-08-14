@@ -24,6 +24,7 @@ To solve this, our design integrates two custom data structures working in tande
      | Stores UNIQUE words      |  | Preserves EXACT word     |
      | Provides O(log n) search |  | order & sentence grammar |
      +--------------------------+  +--------------------------+
+
 1. CustomTextList (Custom Singly Linked List):
    * Appends incoming words sequentially via a tail pointer.
    * Preserves the original word order, formatting, and sentence structure.
@@ -71,23 +72,20 @@ Status: Complete
 To prevent `O(n)` worst-case scenarios on pre-sorted text input, the tree structure can be upgraded to a **Self-Balancing Binary Search Tree** (such as an **AVL Tree** or **Red-Black Tree**). This would guarantee strict `O(log n)` search and modification bounds under all circumstances.
 ---
 ## 🚀 How to Run
-1. **Clone the repository:**
-   
+1. **Clone the repository:**  
 ```bash
    git clone https://github.com/Bushra03Sultan/text-search-replace.git
   
-2. **Navigate to project directory:**
-   
+2. **Navigate to project directory:**  
 ```bash
    cd text-search-replace
   
 3. **Ensure `input.txt` is present** in the same root folder with your sample text.
-4. **Compile and execute:**
-   
+4. **Compile and execute:**   
 ```bash
    javac TextSearchReplace.java
    java TextSearchReplace
-   `
+   
 ---
 
 ## 👩‍💻 Author
