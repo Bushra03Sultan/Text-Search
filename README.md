@@ -23,21 +23,31 @@ To solve this, our design integrates two custom data structures working in tande
      | Stores UNIQUE words      |  | Preserves EXACT word     |
      | Provides O(log n) search |  | order & sentence grammar |
      +--------------------------+  +--------------------------+
-1. **CustomTextList (Custom Singly Linked List):**
-   - Appends incoming words sequentially via a tail pointer.
-   - Preserves the original word order, formatting, and sentence structure.
-2. **BinarySearchTree (Custom BST):**
-   -only unique words words** lexicographically.
-   - Provides O(log n) efficient word lookup operations.
+1. CustomTextList (Custom Singly Linked List):
+   * Appends incoming words sequentially via a tail pointer.
+   * Preserves the original word order, formatting, and sentence structure.
+2. BinarySearchTree (Custom BST):
+   * Stores only unique words lexicographically.
+   * Provides O(log n) efficient word lookup operations.
 ---
-## 🔄 Search & Replace Workflowreplaceeplace** operation is execuLookup:ookup:** The system querBST **BST** to verify if the search word exists in O(log n) average tSequence Update:pdate:** If found, it iterates through the CustomTextList to update all occurrences in the actual tTree Synchronization & Edge Case Handling:dling:**
-   - The old word is deleted from the BST via node restructuring (handling leaf, single-child, or two-children node deletions).
-   - If the *new replacement word* does not already exist in the tree, it is inserted into the BST to keep the tree accurate.
+## 🔄 Search & Replace Workflow
+When a replace operation is executed:
+* Lookup: The system queries the Binary Search Tree (BST) to verify if the search word exists in O(log n) average time.
+* Sequence Update: If found, it iterates through the CustomTextList to update all occurrences in the actual text.
+* Tree Synchronization & Edge Case Handling:
+  * The old word is deleted from the BST via node restructuring (handling leaf, single-child, or two-children node deletions).
+  * If the new replacement word does not already exist in the tree, it is inserted into the BST to keep the tree accurate.
 ---
 ## 📊 Complexity Analysis
 
 | Algorithm / Operation | Structure Used | Average Case | Worst Case | Description |
-| :--- | :--- | :--- | :--- | :Word SearchSearch** | Binary Search Tree | O(log n) | O(n) | Recursive binary search traverWord Insertionertion** | Binary Search Tree | O(log n) | O(n) | Lexicographical placement (ignores duplicatWord Deletionletion** | Binary Search Tree | O(log n) | O(n) | Replaces node using in-order succesText Traversal & Replaceeplace** | Custom Linked List | O(m) | O(m) | Sequential pass over all m worNote:*Note:** n represents the nuunique words words** in the BST, while m represetotal word count count** in the input text.
+| :--- | :--- | :--- | :--- | :--- |
+| Word Search | Binary Search Tree | O(log n) | O(n) | Recursive binary search traversal |
+| Word Insertion | Binary Search Tree | O(log n) | O(n) | Lexicographical placement (ignores duplicates) |
+| Word Deletion | Binary Search Tree | O(log n) | O(n) | Replaces node using in-order successor |
+| Text Traversal & Replace | Custom Linked List | O(m) | O(m) | Sequential pass over all m words |
+
+> Note: n represents the number of unique words in the BST, while m represents the total word count in the input text.
 ---
 ## 🖥️ Console Interface & Sample Output
 `text
@@ -77,9 +87,10 @@ bash
    java TextSearchReplace
    `
 ---
+
 ## 👩‍💻 Author
-* **BushCourse: - ID: `446818050`
-* **Course:** 2431CSS Data Structures and Algorithms (Section: 2385)
+
+Boshra Faruq
+
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bushra03Sultan)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bushra-faruq-906696429)
-
