@@ -13,7 +13,7 @@ Using a single data structure presents trade-offs:
 
 To solve this, our design integrates two custom data structures working in tandem:
 
-`text
+```text
                   +--------------------------------+
                   |           input.txt            |
                   +--------------------------------+
