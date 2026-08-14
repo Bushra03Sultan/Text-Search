@@ -10,6 +10,7 @@ Using a single data structure presents trade-offs:
 * A BST automatically sorts unique words alphabetically, losing sentence structure.
 * A Linked List preserves text order but requires O(m) linear time for searching.
 To solve this, our design integrates two custom data structures working in tandem:
+
                   +--------------------------------+
                   |           input.txt            |
                   +--------------------------------+
@@ -50,7 +51,7 @@ When a replace operation is executed:
 > Note: n represents the number of unique words in the BST, while m represents the total word count in the input text.
 ---
 ## 🖥️ Console Interface & Sample Output
-`text
+```text
 =====================================
 1. Search for a word only
 2. Replace a word
@@ -64,6 +65,7 @@ Expected Output
 System: Text updated successfully.
 Current Text: This project applies advanced information structures to solve text processing problems. 
 Status: Complete
+```
 ---
 ## 🔮 Future Improvements
 To prevent `O(n)` worst-case scenarios on pre-sorted text input, the tree structure can be upgraded to a **Self-Balancing Binary Search Tree** (such as an **AVL Tree** or **Red-Black Tree**). This would guarantee strict `O(log n)` search and modification bounds under all circumstances.
@@ -71,18 +73,18 @@ To prevent `O(n)` worst-case scenarios on pre-sorted text input, the tree struct
 ## 🚀 How to Run
 1. **Clone the repository:**
    
-bash
+```bash
    git clone https://github.com/Bushra03Sultan/text-search-replace.git
   
 2. **Navigate to project directory:**
    
-bash
+```bash
    cd text-search-replace
   
 3. **Ensure `input.txt` is present** in the same root folder with your sample text.
 4. **Compile and execute:**
    
-bash
+```bash
    javac TextSearchReplace.java
    java TextSearchReplace
    `
