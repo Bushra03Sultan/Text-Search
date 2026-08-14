@@ -78,6 +78,8 @@ To prevent `O(n)` worst-case scenarios on pre-sorted text input, the tree struct
 
 Ensure input.txt is present in the project directory, then run the following commands in your terminal:
 
+```bash
+
 # 1. Clone the repository
 git clone https://github.com/Bushra03Sultan/text-search-replace.git
 
@@ -91,7 +93,7 @@ java TextSearchReplace
 
 ## 👩‍💻 Author
 
-Bushra Farooq
+Bushra Faruq
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Bushra03Sultan)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bushra-faruq-906696429)
