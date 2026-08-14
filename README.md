@@ -1,0 +1,80 @@
+# 🔍 Text Search and Replace System (From Scratch)
+![Java](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=openjdk)
+![Data Structure](https://img.shields.io/badge/Data%20Structures-BST%20%2B%20Linked%20List-blue?style=for-the-badge)
+![Built From Scratch](https://img.shields.io/badge/Constraints-No%20Java%20Collections-red?style=for-the-badge)
+A high-performance Text Search and Replace System implemented in Java entirely from scratch, without relying on built-in collections framework classes (such as ArrayList or HashMap). 
+This project combines a Custom Singly Linked List with a Binary Search Tree (BST) to achieve fast searching while maintaining sentence order and grammatical integrity.
+---
+## 🏗️ Architecture & Dual Data Structure Design
+Using a single data structure presents tradeoffs:
+* A BST automatically sorts unique words alphabetically, losing sentence structure.
+* A Linked List preserves text order but requires $O(m)$ linear time for searching.
+To solve this, our design integrates two custom data structures working in tandem:
+                  +--------------------------------+
+                  |           input.txt            |
+                  +--------------------------------+
+                                  |
+                   +--------------+--------------+
+                   |                             |
+                   v                             v
+     +--------------------------+  +--------------------------+
+     |   BinarySearchTree (BST) |  | CustomTextList (Linked)  |
+     +--------------------------+  +--------------------------+
+     | Stores UNIQUE words      |  | Preserves EXACT word     |
+     | Provides O(log n) search |  | order & sentence grammar |
+     +--------------------------+  +--------------------------+
+1. **CustomTextList (Custom Singly Linked List):**
+   - Appends incoming words sequentially via a tail pointer.
+   - Preserves the original word order, formatting, and sentence structure.
+2. **BinarySearchTree (Custom BST):**
+   -only unique words words** lexicographically.
+   - Provides $O(\log n)$ efficient word lookup operations.
+---
+## 🔄 Search & Replace Workflowreplaceeplace** operation is execuLookup:ookup:** The system querBST **BST** to verify if the search word exists in $O(\log n)$ average tSequence Update:pdate:** If found, it iterates through the CustomTextList to update all occurrences in the actual tTree Synchronization & Edge Case Handling:dling:**
+   - The old word is deleted from the BST via node restructuring (handling leaf, single-child, or two-children node deletions).
+   - If the *new replacement word* does not already exist in the tree, it is inserted into the BST to keep the tree accurate.
+---
+## 📊 Complexity Analysis
+
+| Algorithm / Operation | Structure Used | Average Case | Worst Case | Description |
+| :--- | :--- | :--- | :--- | :Word SearchSearch** | Binary Search Tree | $O(\log n)$ | $O(n)$ | Recursive binary search traverWord Insertionertion** | Binary Search Tree | $O(\log n)$ | $O(n)$ | Lexicographical placement (ignores duplicatWord Deletionletion** | Binary Search Tree | $O(\log n)$ | $O(n)$ | Replaces node using in-order succesText Traversal & Replaceeplace** | Custom Linked List | $O(m)$ | $O(m)$ | Sequential pass over all $m$ worNote:*Note:** $n$ represents the nuunique words words** in the BST, while $m$ represetotal word count count** in the input text.
+---
+## 🖥️ Console Interface & Sample Output
+`text
+=====================================
+1. Search for a word only
+2. Replace a word
+3. Display current text
+4. Exit
+=====================================
+Choose an option (1-4): 2
+Search : data
+Replace with : information
+Expected Output
+System: Text updated successfully.
+Current Text: This project applies advanced information structures to solve text processing problems. 
+Status: Complete
+---
+## 🔮 Future Improvements
+To prevent $O(n)$ worst-case scenarios on pre-sorted text input, the tree structure can be upgraded to a **Self-Balancing Binary Search Tree** (such as an **AVL Tree** or **Red-Black Tree**). This would guarantee strict $O(\log n)$ search and modification bounds under all circumstances.
+---
+## 🚀 How to Run
+1. **Clone the repository:**
+   
+bash
+   git clone https://github.com/Bushra03Sultan/text-search-replace.git
+  
+2. **Navigate to project directory:**
+   
+bash
+   cd text-search-replace
+  
+3. **Ensure `input.txt` is present** in the same root folder with your sample text.
+4. **Compile and execute:**
+   
+bash
+   javac TextSearchReplace.java
+   java TextSearchReplace
+   `
+---
+
