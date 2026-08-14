@@ -89,6 +89,7 @@ cd text-search-replace
 # 3. Compile and execute the application
 javac TextSearchReplace.java
 java TextSearchReplace
+```
 ---
 
 ## 👩‍💻 Author
